@@ -1,0 +1,7 @@
+#!/bin/bash
+cd "build"
+# Build everything
+cmake .. && make
+# Run the executables
+./hello_world/hello_world
+./overloading/overloading

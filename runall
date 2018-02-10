@@ -2,9 +2,7 @@
 cd "build"
 # Build everything
 cmake .. && make
-printf "\n"
-# Run the executables
+printf "\n~~~Hello_world~~~\n"
 ./hello_world/hello_world
-printf "\n"
+printf "\n~~~Overloading~~~\n"
 ./overloading/overloading
-printf "\n"

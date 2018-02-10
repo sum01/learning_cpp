@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 
-person::person(const std::string &first, const std::string &last, const birthday birth)
+person::person(const std::string &first, const std::string &last, const birthday &birth)
 	: first_name(first), last_name(last), bday(birth) {
 }
 

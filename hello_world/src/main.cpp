@@ -25,11 +25,6 @@ void change_by_ref(int *x) {
 	*x = 242;
 }
 
-// Changing by value
-int change_by_val(int x) {
-	return x + 2;
-}
-
 // Declaring our class in-line (without a header file)
 class test_class {
 private:
@@ -68,7 +63,8 @@ public:
 
 int main() {
 	/*
-	   Type in a code to declare two variables, a and b; and two pointers, pa and pb, pointing to a and b, respectively. The value of a is changed via pointer pa, adding to it the value of b accessed via pointer pb.
+	   Type in a code to declare two variables, a and b; and two pointers, pa and pb, pointing to a and b, respectively.
+	   The value of a is changed via pointer pa, adding to it the value of b accessed via pointer pb.
 	 */
 	int a = 1;
 	int b = 2;

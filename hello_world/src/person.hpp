@@ -6,7 +6,7 @@
 
 class person {
 public:
-	person(const std::string &, const std::string &, const birthday);
+	person(const std::string &, const std::string &, const birthday &);
 	void say_bday() const;
 	void say_name() const;
 private:

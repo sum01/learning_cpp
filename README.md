@@ -1,8 +1,8 @@
 # Learning C++
 
-Just a dumping ground for any C++ projects that I make while learning C++.
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0720f2cbb72c4c2a9f14e77f7dcf3500)](https://www.codacy.com/app/sum01/learning_cpp?utm_source=github.com&utm_medium=referral&utm_content=sum01/learning_cpp&utm_campaign=Badge_Grade)
 
-PS: [SoloLearn](https://www.sololearn.com) is great :+1:
+Just a dumping ground for any C++ projects that I make while learning C++.
 
 ## Building
 

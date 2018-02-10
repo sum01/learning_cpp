@@ -4,7 +4,7 @@
 class const_class {
 public:
 	// Sets the const integer upon instantiation
-	const_class(int);
+	explicit const_class(int);
 	void my_print() const;
 private:
 	const int const_num;

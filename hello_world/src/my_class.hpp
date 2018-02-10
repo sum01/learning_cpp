@@ -4,7 +4,7 @@
 class my_class {
 public:
 	// Our custructor
-	my_class();
+	explicit my_class();
 	// Our destructor
 	~my_class();
 protected:

@@ -20,12 +20,12 @@ int factorial(int x) {
 	}
 }
 
-// Taking a reference and changing its value (slower than by-val)
+// Taking a reference and changing its value
 void change_by_ref(int *x) {
 	*x = 242;
 }
 
-// The normal (quicker) way to change a value
+// Changing by value
 int change_by_val(int x) {
 	return x + 2;
 }
@@ -41,12 +41,12 @@ private:
 // The methods/vars accessible by all that inherit this class
 public:
 // Method
-	void say(std::string str) {
+	void say(const std::string &str) {
 		std::cout << str << std::endl;
 	}
 	// A "constructor" method, which is called whenever an instance of the class is created
 	// NOTE: it must have the name of the class
-	test_class(std::string last_name) {
+	explicit test_class(const std::string &last_name) {
 		say("test_class instantiated");
 		priv_name_second = last_name;
 	}
@@ -56,7 +56,7 @@ public:
 		return x + 1;
 	}
 // Sets a passed name on the private "priv_name" var
-	void set_priv_name(std::string new_name) {
+	void set_priv_name(const std::string &new_name) {
 		// self isn't needed
 		priv_name = new_name;
 	}
@@ -65,13 +65,6 @@ public:
 		say(get_priv_name());
 	}
 };
-
-
-// A to_string() function that takes any type
-// Don't actually use this, std::to_string() doesn't need a wrapper
-std::string to_str(auto x) {
-	return std::to_string(x);
-}
 
 int main() {
 	/*
@@ -90,13 +83,11 @@ int main() {
 	// Assign a value to that heap int
 	*test = 2533;
 	// Print the literal value, and mem address
-	std::cout << *test << " at " << &test << std::endl;
-	// Dealloc the memory so we avoid leaks
+	std::cout << "Value: " << *test << " at memory location: " << &test << std::endl;
+	// Deallocate the memory once done with it so to avoid leaks
 	delete test;
-	// The variable itself isn't dealloc'd, only the heap memory
-	*test = *pa;
-	std::cout << *test << std::endl;
 
+	std::cout << "\nRandom data:" << std::endl;
 	std::srand(std::time(0));
 
 	for (int z = 0; z < 10; z++) {

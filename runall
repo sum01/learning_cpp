@@ -1,8 +1,0 @@
-#!/bin/bash
-cd "build"
-# Build everything
-cmake .. && make
-printf "\n~~~Hello_world~~~\n"
-./hello_world/hello_world
-printf "\n~~~Overloading~~~\n"
-./overloading/overloading

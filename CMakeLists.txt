@@ -4,3 +4,4 @@ project(Learning_cpp VERSION 1.0.0 LANGUAGES CXX)
 # Build our projects
 add_subdirectory(hello_world)
 add_subdirectory(overloading)
+add_subdirectory(inheritance)

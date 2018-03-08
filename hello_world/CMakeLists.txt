@@ -11,4 +11,5 @@ add_executable(hello_world
 
 target_include_directories(hello_world
 	PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+	PUBLIC $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
 )

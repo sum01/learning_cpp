@@ -4,9 +4,14 @@
 
 Just a dumping ground for any C++ projects that I make while learning C++.
 
-## Building
+## Depdencies
 
-Depdencies: `cmake`, and any compatible C++ compiler.
+`cmake`, and any compatible C++ compiler.
+
+[templates](./templates/src/sum.hpp) requires Boost, but only if building Debug mode.\
+If you're using a multi-config compiler like MSVC, then it's required regardless.
+
+## Building
 
 Run `cmake` on the root `CMakeLists.txt`, or `cd build` and `cmake ..`, then compile the makefile with your OS's compiler.
 

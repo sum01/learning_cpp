@@ -12,5 +12,13 @@ add_executable(inheritance
 
 target_include_directories(inheritance PUBLIC
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
-	$<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+	$<INSTALL_INTERFACE:src>
+)
+
+set_target_properties(inheritance PROPERTIES
+	PRIVATE_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/daughter.hpp;${CMAKE_CURRENT_SOURCE_DIR}/src/enemy.hpp;${CMAKE_CURRENT_SOURCE_DIR}/src/monster.hpp;${CMAKE_CURRENT_SOURCE_DIR}/src/mother.hpp;${CMAKE_CURRENT_SOURCE_DIR}/src/ninja.hpp"
+)
+
+target_compile_features(inheritance
+	PRIVATE cxx_std_11
 )

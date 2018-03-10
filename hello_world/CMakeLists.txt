@@ -9,7 +9,15 @@ add_executable(hello_world
 	src/birthday.cpp
 )
 
-target_include_directories(hello_world
-	PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
-	PUBLIC $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+target_include_directories(hello_world PUBLIC
+	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+	$<INSTALL_INTERFACE:src>
+)
+
+set_target_properties(hello_world PROPERTIES
+	PRIVATE_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/birthday.hpp;${CMAKE_CURRENT_SOURCE_DIR}/src/const_class.hpp;${CMAKE_CURRENT_SOURCE_DIR}/src/my_class.hpp;${CMAKE_CURRENT_SOURCE_DIR}/src/person.hpp"
+)
+
+target_compile_features(hello_world
+	PRIVATE cxx_std_11
 )

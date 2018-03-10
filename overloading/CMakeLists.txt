@@ -6,7 +6,15 @@ add_executable(overloading
 	src/myclass.cpp
 )
 
-target_include_directories(overloading
-	PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
-	PUBLIC $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+target_include_directories(overloading PUBLIC
+	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+	$<INSTALL_INTERFACE:src>
+)
+
+set_target_properties(overloading PROPERTIES
+	PRIVATE_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/src/myclass.hpp"
+)
+
+target_compile_features(overloading
+	PRIVATE cxx_std_11
 )
